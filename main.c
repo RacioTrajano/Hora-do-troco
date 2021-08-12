@@ -13,22 +13,22 @@ if (money == 0){
         printf("%d nota(s) de 100 ", cem);
       }
     if (cinquenta != 0){
-        printf("%d nota(s) de 100 ", cinquenta);
+        printf("%d nota(s) de 50 ", cinquenta);
       }
     if (vinte != 0){
-        printf("%d nota(s) de 100 ", vinte);
+        printf("%d nota(s) de 20 ", vinte);
       } 
     if (dez != 0){
-        printf("%d nota(s) de 100 ", dez);
+        printf("%d nota(s) de 10 ", dez);
       }
     if (cinco != 0){
-        printf("%d nota(s) de 100 ", cinco);
+        printf("%d nota(s) de 5 ", cinco);
       }
     if (dois != 0){
-        printf("%d nota(s) de 100 ", dois);
+        printf("%d nota(s) de 2 ", dois);
       }
     if (real != 0){
-        printf("%d moeda(s) de 100 ", real);
+        printf("%d moeda(s) de 1 ", real);
       }
 printf("\n");
 cont++;
@@ -42,22 +42,22 @@ else{
     troco(money -100, cem +1, cinquenta, vinte, dez, cinco, dois, real);
   }
   if(money > 50){
-    troco(money -100, cem , cinquenta+1, vinte, dez, cinco, dois, real);
+    troco(money -50, cem , cinquenta+1, vinte, dez, cinco, dois, real);
   }
   if(money > 20){
-    troco(money -100, cem +1, cinquenta, vinte+1, dez, cinco, dois, real);
+    troco(money -20, cem +1, cinquenta, vinte+1, dez, cinco, dois, real);
   }
   if(money > 10){
-    troco(money -100, cem +1, cinquenta, vinte, dez+1, cinco, dois, real);
+    troco(money -10, cem +1, cinquenta, vinte, dez+1, cinco, dois, real);
   }
   if(money > 5){
-    troco(money -100, cem +1, cinquenta, vinte, dez, cinco+1, dois, real);
+    troco(money -5, cem +1, cinquenta, vinte, dez, cinco+1, dois, real);
   }
   if(money > 2){
-    troco(money -100, cem +1, cinquenta, vinte, dez, cinco, dois+1, real);
+    troco(money -2, cem +1, cinquenta, vinte, dez, cinco, dois+1, real);
   }
   if(money > 1){
-    troco(money -100, cem +1, cinquenta, vinte, dez, cinco, dois, real+1);
+    troco(money -1, cem +1, cinquenta, vinte, dez, cinco, dois, real+1);
   }
 }
 
