@@ -1,14 +1,15 @@
 #include <stdio.h>
 
 
-int repetido[20][20][20][20][20][20][20];
+int repetido[20][20][20][20][20][20][20]={0};
 
 void troco (int money, int cem, int cinquenta, int vinte, int dez, int cinco, int dois, int real){
 
 int cont =1;
-if (money == 0){
+if (money == 0 && cont== 1){
   if (repetido[cem][cinquenta][vinte][dez][cinco][dois][real]==0){
   printf("Troco %d: ", cont);
+  cont++;
     if (cem != 0){
         printf("%d nota(s) de 100 ", cem);
       }
@@ -31,33 +32,32 @@ if (money == 0){
         printf("%d moeda(s) de 1 ", real);
       }
 printf("\n");
-cont++;
 repetido[cem][cinquenta][vinte][dez][cinco][dois][real]=1;
 }
 
 }
 
 else{
-  if(money > 100){
+  if(money >= 100){
     troco(money -100, cem +1, cinquenta, vinte, dez, cinco, dois, real);
   }
-  if(money > 50){
+  if(money >= 50){
     troco(money -50, cem , cinquenta+1, vinte, dez, cinco, dois, real);
   }
-  if(money > 20){
-    troco(money -20, cem +1, cinquenta, vinte+1, dez, cinco, dois, real);
+  if(money >= 20){
+    troco(money -20, cem , cinquenta, vinte+1, dez, cinco, dois, real);
   }
-  if(money > 10){
-    troco(money -10, cem +1, cinquenta, vinte, dez+1, cinco, dois, real);
+  if(money >= 10){
+    troco(money -10, cem , cinquenta, vinte, dez+1, cinco, dois, real);
   }
-  if(money > 5){
-    troco(money -5, cem +1, cinquenta, vinte, dez, cinco+1, dois, real);
+  if(money >= 5){
+    troco(money -5, cem , cinquenta, vinte, dez, cinco+1, dois, real);
   }
-  if(money > 2){
-    troco(money -2, cem +1, cinquenta, vinte, dez, cinco, dois+1, real);
+  if(money >= 2){
+    troco(money -2, cem , cinquenta, vinte, dez, cinco, dois+1, real);
   }
-  if(money > 1){
-    troco(money -1, cem +1, cinquenta, vinte, dez, cinco, dois, real+1);
+  if(money >= 1){
+    troco(money -1, cem , cinquenta, vinte, dez, cinco, dois, real+1);
   }
 }
 
