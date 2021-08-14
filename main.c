@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 
-int repetido[20][20][20][20][20][20][20]={0};
+int repetido[4][20][20][20][20][20][20]={0};
 
 void troco (int money, int cem, int cinquenta, int vinte, int dez, int cinco, int dois, int real){
 
